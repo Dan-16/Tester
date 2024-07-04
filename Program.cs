@@ -12,22 +12,26 @@ public class Program
         Store s = new Store( "12", "Norwich");
         Product p = new Product(" ", " ", " ", " ", 123, 234, 345);
         Product m = new Product(" ", " ", " ", " ", 123, 234, 345);
+        Product n = new Product(" ", " ", " ", " ", 123, 234, 345);
         Location l = new Location("Bottom", 123, 234, 345);
+        Stock stock = new Stock(l, p, 4);
+        Stock tock = new Stock(l, m, 4);
+        Stock ock = new Stock(l, n, 4);
         Console.WriteLine(wa.getFullAddress() + "\n" + w.Id + "\n" + w.Name + "\n" + w.Address.Postcode + "\n" + w.Longitude + "\n" + w.Lattitude);
         s.setWarehouse(w2);
         l.setStore(s);
         Console.WriteLine("Creating 4 items of stock.");
-        Stock stock = new Stock(l, p, 4);
-        Stock tock = new Stock(l, m, 4);
+
     
         Console.WriteLine("Adding 4 items of stock.");
-        stock.moveIn(m, 4);
-        Console.WriteLine("Stock now :");
+        stock.moveIn(4);
+        Console.WriteLine("tock now :");
         Console.WriteLine(stock.TotalQuantity);
-        Console.WriteLine("Moving out 6 items of stock.");
-        stock.moveOut(m,7);
-        Console.WriteLine("Stock now :");
+        Console.WriteLine("Moving out 3 items of stock.");
+        stock.moveOut(3);
+        Console.WriteLine("stock now :");
         Console.WriteLine(stock.TotalQuantity);
+        System.Console.WriteLine(DateTime.Now);
 
             if(s.Warehouse != null)
             {
