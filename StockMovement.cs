@@ -11,6 +11,9 @@ namespace Hello_World
             Product = product;
             FromLocation = from;
             ToLocation = to;
+
+            // move stock out of a loc
+            // move stock into another loc
         }
 
         public DateTime Created { get; set; }

@@ -9,6 +9,7 @@ namespace Hello_World
         public int Height;
         public int Depth;
         public int Width;
+        public Location? Location { get; set; }
 
         public int Volume
          {
@@ -26,6 +27,11 @@ namespace Hello_World
             Height = height;
             Depth = depth;
             Width = width;
+        }
+        public void setLocation(Location location)
+        {
+            Location = location;
+            Location.productList.Add(this);
         }
          
     }

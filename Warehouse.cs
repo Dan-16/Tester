@@ -6,13 +6,14 @@ public class Warehouse
     public float Longitude;
     public float Lattitude;
     public WarehouseAddress Address;
-
+    public List<Store> storeList; 
     public Warehouse(int id, string name, float longitude, float lattitude, WarehouseAddress address)
     {
         Id = id;
         Name = name;
         Longitude = longitude;
         Lattitude = lattitude;
-        Address = address;        
+        Address = address;       
+        storeList = new List<Store>(); 
     }
 }
