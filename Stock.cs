@@ -7,6 +7,8 @@ namespace Hello_World
             Location = location;
             Product = product;
             TotalQuantity = quantity;
+
+            Location.stockList.Add(this);
         }
 
         public Location Location { get; set; }
